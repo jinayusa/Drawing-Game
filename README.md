@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Drawing & Guessing Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React-based game where one person draws a word and the other guesses it. The Drawer selects a word and draws on the canvas, while the Guesser attempts to guess the word using visual clues and hints provided as time elapses. Both players earn points when the Guesser correctly identifies the word!
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Two-Player Modes:** Choose between being the Drawer or the Guesser.
+- **Drawing Canvas:** A dedicated canvas for the Drawer to illustrate the chosen word.
+- **Real-Time Guessing:** The Guesser inputs guesses via an interactive input field.
+- **Dynamic Hint System:** Gradual hints are revealed (one letter every 10 seconds) to aid the Guesser.
+- **Points System:** Earn points for correct guesses.
+- **Responsive UI:** Built with React and styled using CSS Modules for a modern look.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- [Node.js](https://nodejs.org/en/) (v12 or higher recommended)
+- npm (comes with Node.js) or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/yourusername/drawing-game.git
+   cd drawing-game
+Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using npm:
+npm install
+Or using yarn:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+yarn install
+Running the Project
+Start the development server:
 
-### `npm run eject`
+npm start
+The application should now be running on http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How to Play
+Select Role:
+When the app loads, choose whether you want to be the Drawer or the Guesser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Drawer:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Enter a word in the input field.
+Click the "Start Game" button to begin drawing on the canvas.
+Guesser:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Wait on the waiting screen until the Drawer has chosen a word.
+Watch the drawing as it progresses.
+Use the hints (letters revealed as time passes) to help you guess the word.
+Type your guess in the input field and submit it.
+Earn points if you guess correctly!
+Game Mechanics:
 
-## Learn More
+The game is timed. As time counts down, hints are gradually provided.
+Both the Drawer and the Guesser are awarded points for a correct guess.
+If time runs out before the word is guessed, the correct word is revealed and the round ends.
+Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+drawing-game/
+├── src/
+│   ├── App.jsx              # Main React component with game logic
+│   ├── index.js             # Application entry point
+│   └── styles/
+│       └── styles.module.css  # CSS Module for component styling
+└── package.json
+Future Improvements
+Multiplayer Support: Integrate real-time communication (e.g., using Socket.IO) for a true multiplayer experience across devices.
+Enhanced Drawing Tools: Expand the drawing interface with additional tools and color options.
+Improved UI/UX: Refine the design and animations for a smoother experience.
+Persistent Scores: Add leaderboards and persistent score tracking across sessions.
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements or bug fixes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+License
+This project is licensed under the MIT License.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgements
+This project is inspired by popular drawing and guessing games.
+Built as a demonstration of React, CSS Modules, and simple game logic.
